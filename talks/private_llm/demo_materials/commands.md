@@ -13,7 +13,7 @@ PUT _cluster/settings
         ]
   }
 }
-'''
+```
 
 ## Registering model
 ```json
@@ -49,7 +49,7 @@ POST /_plugins/_ml/models/_register
         ]                          
     } 
 }
-'''
+```
 
 ## Testing model with predict API
 ```json
@@ -60,7 +60,7 @@ POST /_plugins/_ml/models/<model-id-created-above>/_predict
        "system_prompt": "You are a helpful assistant."
      }
    }
-'''
+```
 
 ## Registering agent
 ```json
@@ -100,7 +100,7 @@ POST /_plugins/_ml/agents/_register
   ],
   "app_type": "os_chat"
 }
-'''
+```
 
 ## Testing agent
 ```json
@@ -112,7 +112,7 @@ POST /_plugins/_ml/agents/<agent-id-created-above>/_execute
       "user_prompt": "${parameters.question}"
     }
 }
-'''
+```
 
 ```json
 POST /_plugins/_ml/agents/<agent-id-created-above>/_execute
@@ -123,4 +123,4 @@ POST /_plugins/_ml/agents/<agent-id-created-above>/_execute
       "user_prompt": "${parameters.question}"
     }
 }
-'''
+```
