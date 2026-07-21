@@ -22,7 +22,7 @@ services:
     volumes:
       - opensearch-data1:/usr/share/opensearch/data
       # Custom JDK truststore with private LLM server cert
-      - ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
+      #- ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
     ports:
       - 9200:9200
       - 9600:9600  # required for Performance Analyzer
@@ -49,7 +49,7 @@ services:
     volumes:
       - opensearch-data2:/usr/share/opensearch/data
       # Custom JDK truststore with private LLM server cert
-      - ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
+      #- ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
     networks:
       - opensearch-net
   opensearch-ml1:
@@ -74,7 +74,7 @@ services:
     volumes:
       - opensearch-ml1:/usr/share/opensearch/data
       # Custom JDK truststore with private LLM server cert
-      - ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
+      #- ./cacerts-with-llm:/usr/share/opensearch/jdk/lib/security/cacerts:ro
     networks:
       - opensearch-net
   opensearch-dashboards:
